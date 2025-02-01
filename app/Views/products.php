@@ -1,6 +1,5 @@
 <?= $this->extend('layout') ?>
 
 <?= $this->section('content') ?>
-    <?= view('sections/home/banner') ?>
-    <?= view('sections/home/products') ?>
+<h1>Hello World! Products</h1>
 <?= $this->endSection() ?>
