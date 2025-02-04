@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/repositories/codeigniter-massivehomecommx/codeigniter-massivehomecommx/
+    - /bin/cp -R $DEPLOYPATH* /c:/laragon/www/Codeigniter/massivehomecommx/public_html/
