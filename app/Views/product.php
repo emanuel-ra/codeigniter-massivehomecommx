@@ -21,7 +21,7 @@
         <?php
         // Assuming you have a database connection set up
         $db = \Config\Database::connect();
-        $builder = $db->table('datasheetproductsdescription');
+        $builder = $db->table('dataSheetProductsDescription');
 
         // Fetch product details
         $builder->select('title,desciption');
@@ -43,7 +43,7 @@
 <div class="flex w-full justify-center mt-4 mb-4 ">
     <?php
     // Fetch product specifications
-    $specBuilder = $db->table('datasheetproductsspecifications');
+    $specBuilder = $db->table('dataSheetProductsSpecifications');
     $specBuilder->select('id, title');
     $specBuilder->where('product_code', $product[0]->product_code);
     $specBuilder->where('iShow', 1);
@@ -52,7 +52,7 @@
 
     foreach ($productSpecifications as $specification) {
         // Fetch specification details
-        $detailBuilder = $db->table('datasheetproductssubspecifications');
+        $detailBuilder = $db->table('dataSheetProductsSubSpecifications');
         $detailBuilder->select('iModulo, iOrden, desciption');
         $detailBuilder->where('specificationsId', $specification->id);
         $detailQuery = $detailBuilder->get();
