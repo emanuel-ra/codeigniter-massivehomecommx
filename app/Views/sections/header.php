@@ -2,7 +2,7 @@
     <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <a class="block text-teal-600" href="#">
             <span class="sr-only">Home</span>
-            <img src="/assets/images/logo-massivehome.webp" alt="Fabricantes e importadores directos de las marcas megaluz, link bits, AEK Cyber, Cozyna, entre otras" />
+            <img src="<?= base_url('/assets/images/logo-massivehome.webp') ?>" alt="Fabricantes e importadores directos de las marcas megaluz, link bits, AEK Cyber, Cozyna, entre otras" />
         </a>
 
         <div class="flex flex-1 items-center justify-end md:justify-between">
@@ -45,6 +45,6 @@
         </div>
     </div>
     <div>
-        <img src="/assets/images/brands-banner.webp" alt="Fabricantes e importadores directos de las marcas megaluz, link bits, AEK Cyber, Cozyna, entre otras" />
+        <img src="<?= base_url('/assets/images/brands-banner.webp') ?>" alt="Fabricantes e importadores directos de las marcas megaluz, link bits, AEK Cyber, Cozyna, entre otras" />
     </div>
 </header>
