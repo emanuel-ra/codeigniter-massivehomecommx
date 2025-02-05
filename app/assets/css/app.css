@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* .page-display {
+    @apply float-right;
+  }
+
+  .pagination b {
+    @apply border border-gray-600 transition duration-300 text-white bg-gray-600 float-left px-4 py-2;
+  }
+
+  .pagination a:first-child {
+    @apply rounded-l-lg mx-1;
+  }
+
+  .pagination a:last-child {
+    @apply rounded-r-lg;
+  }
+
+  .pagination .label-pagination {
+    @apply float-left;
+  }
+
+  .pagination a:hover {
+    @apply bg-gray-600;
+  }
+
+  .pagination {
+    @apply inline-block w-full;
+  }
+
+  .pagination a {
+    @apply text-black float-left px-4 py-2 no-underline transition duration-300 border border-gray-300;
+  }
+
+  .pagination a.active {
+    @apply bg-green-500 text-white border-green-500;
+  }
+
+  .pagination a:hover:not(.active) {
+    @apply bg-gray-300;
+  }
+
+  .pagination-btns {
+    @apply float-right;
+  } */
+}

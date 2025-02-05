@@ -9,15 +9,15 @@
             <nav aria-label="Global" class="hidden md:block">
                 <ul class="flex items-center gap-6 text-sm">
                     <li>
-                        <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Inicio </a>
+                        <a class="text-gray-500 transition hover:text-gray-500/75" href="<?= base_url() ?>"> Inicio </a>
                     </li>
 
                     <li>
-                        <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Productos </a>
+                        <a class="text-gray-500 transition hover:text-gray-500/75" href="<?= base_url('/products') ?>"> Productos </a>
                     </li>
 
                     <li>
-                        <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Contacto </a>
+                        <a class="text-gray-500 transition hover:text-gray-500/75" href="<?= base_url('/contact') ?>"> Contacto </a>
                     </li>
 
                     <li>
