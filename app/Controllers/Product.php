@@ -19,7 +19,7 @@ class Product extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Product with ID ' . $id . ' not found.');
         }
 
-        $gallery = $this->db->query('SELECT img FROM galleryproducts WHERE productId = ' . $id)->getResult();
+        $gallery = $this->db->query('SELECT img FROM galleryProducts WHERE productId = ' . $id)->getResult();
 
         return view('product', ['product' => $product, 'gallery' => $gallery]);
     }
