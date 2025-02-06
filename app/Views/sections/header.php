@@ -21,7 +21,7 @@
                     </li>
 
                     <li>
-                        <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Devoluciones </a>
+                        <a class="text-gray-500 transition hover:text-gray-500/75" target="_blank" href="https://linkbits.larksuite.com/share/base/form/shruszHIle2siCK5MVDuKY6q84e"> Devoluciones </a>
                     </li>
 
                 </ul>
