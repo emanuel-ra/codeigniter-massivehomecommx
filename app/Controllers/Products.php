@@ -7,6 +7,7 @@ class Products extends BaseController
     public function index(): string
     {
         $search = $this->request->getGet('search');
+        $categoryIds = $this->request->getGet('category');
 
         $pager = \Config\Services::pager();
         $model = new \App\Models\ProductModel();
@@ -19,10 +20,29 @@ class Products extends BaseController
                 ->groupEnd();
         }
 
+
+        if (is_array($categoryIds)) {
+            $model->whereIn('id', function ($builder) use ($categoryIds) {
+                $builder->select('idProducto')
+                    ->from('relCategoriasProductos')
+                    ->whereIn('idCategoria', $categoryIds);
+            });
+        }
+
+        $categories = $this->getCategories();
         $data = [
             'products' => $model->paginate(10),
-            'pager' => $model->pager
+            'pager' => $model->pager,
+            'categories' => $categories,
+            "search" => $search
         ];
         return view('products', $data);
+    }
+
+    private function getCategories(): array
+    {
+        $model = new \App\Models\CategoryModel();
+        $model->where('statusId', 1);
+        return $model->where('statusId', 1)->findAll();
     }
 }

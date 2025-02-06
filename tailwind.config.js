@@ -5,7 +5,11 @@ module.exports = {
     './app/Views/**/*.php',
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateRows: {
+        '[auto,auto,1fr]': 'auto auto 1fr',
+      },
+    },
   },
   plugins: [],
 }

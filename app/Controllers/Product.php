@@ -12,14 +12,14 @@ class Product extends BaseController
     }
     public function index($id)
     {
-
-        $product = $this->db->query('SELECT * FROM products WHERE statusId = 1 AND id = ' . $id)->getResult();
+        //statusId = 1 AND
+        $product = $this->db->query('SELECT * FROM products WHERE  id = ' . $id)->getResult();
 
         if (empty($product)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Product with ID ' . $id . ' not found.');
         }
 
-        $gallery = $this->db->query('SELECT img FROM galleryProducts WHERE productId = ' . $id)->getResult();
+        $gallery = $this->db->query("SELECT img FROM galleryProducts WHERE productId = $id LIMIT 3")->getResult();
 
         return view('product', ['product' => $product, 'gallery' => $gallery]);
     }
