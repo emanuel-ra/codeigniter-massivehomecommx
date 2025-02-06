@@ -12,8 +12,8 @@ class Product extends BaseController
     }
     public function index($id)
     {
-        //statusId = 1 AND
-        $product = $this->db->query('SELECT * FROM products WHERE  id = ' . $id)->getResult();
+
+        $product = $this->db->query('SELECT * FROM products WHERE statusId = 1 AND id = ' . $id)->getResult();
 
         if (empty($product)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Product with ID ' . $id . ' not found.');
