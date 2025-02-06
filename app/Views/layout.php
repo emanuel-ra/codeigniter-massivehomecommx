@@ -14,6 +14,9 @@
     <main>
         <?= $this->renderSection('content') ?>
     </main>
+
+    <?= view('scripts/google-analytics'); ?>
+
     <?= view('sections/footer'); ?>
 </body>
 
