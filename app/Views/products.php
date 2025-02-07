@@ -219,7 +219,7 @@
                         <img
                             src="https://massivehome.com.mx/images/productos/<?= $product['Img'] ?>"
                             alt="<?= $product['nameProduct'] ?>"
-                            class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+                            class="h-[300px] w-full  transition duration-500 group-hover:scale-105 sm:h-[300px]" />
 
                         <div class="relative bg-white pt-3">
                             <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
