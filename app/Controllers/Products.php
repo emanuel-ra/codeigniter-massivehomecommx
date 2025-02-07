@@ -34,7 +34,8 @@ class Products extends BaseController
             'products' => $model->paginate(10),
             'pager' => $model->pager,
             'categories' => $categories,
-            "search" => $search
+            "search" => $search,
+            "selectedCategoryIds" => $categoryIds
         ];
         return view('products', $data);
     }

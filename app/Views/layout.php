@@ -44,6 +44,8 @@
 
     <?= view('scripts/google-analytics'); ?>
 
+
+
     <?= view('sections/footer'); ?>
 </body>
 
