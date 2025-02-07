@@ -1,12 +1,19 @@
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7MQF60XMBV"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
+<?php
+if (ENVIRONMENT === 'production'):
+?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7MQF60XMBV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    gtag('config', 'G-7MQF60XMBV');
-</script>
+        gtag('config', 'G-7MQF60XMBV');
+    </script>
+
+<?php
+endif;
+?>
