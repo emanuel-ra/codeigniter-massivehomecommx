@@ -59,16 +59,28 @@
                             class="z-50 group-open:absolute group-open:top-auto group-open:mt-2 ltr:group-open:start-0">
                             <div class="w-96 rounded-sm border border-gray-200 bg-white">
                                 <header class="flex items-center justify-between p-4">
-                                    <span class="text-sm text-gray-700"> 0 Selected </span>
+                                    <span class="text-sm text-gray-700" id="filter_categories_selected_counter"> 0 Selected </span>
 
-                                    <button type="button" class="text-sm text-gray-900 underline underline-offset-4">
-                                        Reset
-                                    </button>
+                                    <div>
+                                        <button type="button" class="text-sm text-gray-900 underline underline-offset-4" onclick="resetCheckboxes()">
+                                            Reset
+                                        </button>
+
+                                        <button type="submit" class="text-sm text-gray-900 underline underline-offset-4">
+                                            Filtrar
+                                        </button>
+                                    </div>
                                 </header>
 
                                 <ul class="space-y-1 border-t border-gray-200 p-4">
 
                                     <?php foreach ($categories as $category): ?>
+                                        <?php
+                                        $checked = '';
+                                        if (is_array($selectedCategoryIds)) {
+                                            $checked = in_array($category['id'], $selectedCategoryIds) ? 'checked' : '';
+                                        }
+                                        ?>
                                         <li>
                                             <label for="FilterCategory<?= $category['id'] ?>" class="inline-flex items-center gap-2">
                                                 <input
@@ -76,7 +88,8 @@
                                                     id="FilterCategory<?= $category['id'] ?>"
                                                     name="category[]"
                                                     value="<?= $category['id'] ?>"
-                                                    class="size-5 rounded-sm border-gray-300" />
+                                                    class="size-5 rounded-sm border-gray-300 checks-categories"
+                                                    <?= $checked ?> />
 
                                                 <span class="text-sm font-medium text-gray-700"> <?= $category['categoryName'] ?> </span>
                                             </label>
@@ -123,14 +136,7 @@
                     </div>
 
                 </div>
-                <div>
-                    <button class="inline-block rounded border border-blue-600 bg-blue-600 p-2 text-white hover:bg-transparent hover:text-blue-600 focus:ring-3 focus:outline-hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
 
-                    </button>
-                </div>
                 <!-- <div class="relative">
                     <details class="group [&_summary::-webkit-details-marker]:hidden">
                         <summary
@@ -213,7 +219,7 @@
                         <img
                             src="https://massivehome.com.mx/images/productos/<?= $product['Img'] ?>"
                             alt="<?= $product['nameProduct'] ?>"
-                            class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+                            class="h-[300px] w-full  transition duration-500 group-hover:scale-105 sm:h-[300px]" />
 
                         <div class="relative bg-white pt-3">
                             <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
@@ -237,5 +243,5 @@
         </div>
     </div>
 </section>
-
+<script src="<?= base_url('/assets/js/products.js') ?>"></script>
 <?= $this->endSection() ?>

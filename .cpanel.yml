@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/linkbitscomercio/repositories/codeigniter-massivehomecommx/
-    - /bin/cp -R $DEPLOYPATH* /home/linkbitscomercio/public_html/
+    - export DEPLOYPATH=/home/massivehomecom/repositories/codeigniter-massivehomecommx/
+    - /bin/cp -R $DEPLOYPATH* /home/massivehomecom/public_html/

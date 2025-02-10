@@ -16,7 +16,7 @@ class Home extends BaseController
         try {
             $carrouselItems = $this->db->query('SELECT img FROM itemsCarousel WHERE statusId = 1 AND CarouselName = "FIRST" ORDER BY iOrden ASC ');
 
-            $products = $this->db->query('SELECT id, product_code,product_code2,nameProduct,Img FROM products WHERE statusId = 1 AND Img != \'\' ORDER BY RAND() LIMIT 16 ');
+            $products = $this->db->query('SELECT id, product_code,product_code2,nameProduct,Img FROM products WHERE statusId = 1 AND Img != \'\' ORDER BY RAND() LIMIT 12 ');
             //$products = $this->db->query('SELECT id, product_code,product_code2,nameProduct,Img FROM products WHERE statusId = 1 AND Img != \'\' LIMIT 16 ');
 
             $data['carrouselItems'] = $carrouselItems->getResult();

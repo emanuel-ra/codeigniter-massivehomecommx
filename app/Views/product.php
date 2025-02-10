@@ -2,7 +2,6 @@
 
 <?= $this->section('content') ?>
 
-
 <div class="bg-white">
     <div class="pt-6">
         <!-- <nav aria-label="Breadcrumb">
@@ -128,6 +127,4 @@
         </div>
     </div>
 </div>
-
-
 <?= $this->endSection() ?>
