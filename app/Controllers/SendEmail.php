@@ -106,7 +106,7 @@ class SendEmail extends Controller
             ";
         }
 
-        $message .= $targetEmail;
+        //$message .= $targetEmail;
 
         // Create an instance of the Email class
         $emailService = \Config\Services::email();;
@@ -129,7 +129,7 @@ class SendEmail extends Controller
 
         // Set email configurations (overwrite default ones)
         $emailService->setFrom(getenv('FROM_EMAIL'), getenv('FROM_NAME'));
-        $emailService->setTo('programador@massivehome.com.mx');
+        $emailService->setTo($targetEmail);
         $emailService->setSubject('Contacto desde pagina Massive Home');
         $emailService->setMessage($message);
         if ($distributor  == true) {
