@@ -85,7 +85,7 @@ class SendEmail extends Controller
            
         ";
 
-        $targetEmail = $this->getEmailByRegion($estado);
+        $targetEmail = ($email == getenv('EMAIL_DEV')) ? getenv('EMAIL_DEV') : $this->getEmailByRegion($estado);
 
         if ($wantsToBeDistributor  == "true") {
             $message .= "
@@ -129,7 +129,7 @@ class SendEmail extends Controller
         $emailService->setFrom(getenv('FROM_EMAIL'), getenv('FROM_NAME'));
         $emailService->setTo($targetEmail);
         $emailService->setBCC(getenv('EMAIL_BCC')); // Copia Oculta (BCC)
-        //$emailService->setCC('copia@dominio.com'); // Copia (CC)
+        $emailService->setCC('programador@masivehome.com'); // Copia (CC)
         $emailService->setSubject('Contacto desde pagina Massive Home');
         $emailService->setMessage($message);
         if ($distributor  == true) {
@@ -171,10 +171,13 @@ class SendEmail extends Controller
             return redirect()->back();
             //echo 'Email sent successfully!';
         } else {
-            echo 'Email failed to send!';
-            session()->setFlashdata('messageError', 'Error inesperado al enviar correo, intente mas tarde!');
             // Debugging: print detailed error messages
-            //echo $emailService->printDebugger();
+            if ($email == getenv('EMAIL_DEV')) {
+                echo $emailService->printDebugger();
+            } else {
+                session()->setFlashdata('messageError', 'Error inesperado al enviar correo, intente mas tarde!');
+                return redirect()->back();
+            }
         }
     }
     private function getRules(): array
