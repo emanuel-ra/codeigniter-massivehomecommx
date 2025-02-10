@@ -216,7 +216,8 @@ class SendEmail extends Controller
     }
     private function getEmailByRegion($region)
     {
-        $NorthwestEmail = "ventas13@massivehome.com.mx";
+        //$NorthwestEmail = "ventas13@massivehome.com.mx";
+        $NorthwestEmail = "ventas1@massivehome.com.mx";
         $Northwest = array(
             'Baja California',
             'Baja California Sur',
@@ -227,7 +228,8 @@ class SendEmail extends Controller
             'Sonora',
         );
 
-        $NorthEmail = "karina.cordero@linkbits.online";
+        //$NorthEmail = "karina.cordero@linkbits.online";
+        $NorthEmail = "contacto@massivehome.com.mx";
         $North = array(
             'Chihuahua',
             'Durango',
@@ -238,7 +240,8 @@ class SendEmail extends Controller
             'Coahuila',
         );
 
-        $CenterEmail = "adriana.aviles@linkbits.online";
+        //$CenterEmail = "adriana.aviles@linkbits.online";
+        $CenterEmail = "ventas5@massivehome.com.mx";
         $Center = array(
             'Hidalgo',
             'Ciudad de México',
@@ -252,7 +255,8 @@ class SendEmail extends Controller
             'Tlaxcala',
         );
 
-        $SuresteEmail = "marco.zamoratey1@megaluz.online";
+        //$SuresteEmail = "marco.zamoratey1@megaluz.online";
+        $SuresteEmail = "info@massivehome.com.mx";
         $Sureste  = array(
             'Campeche',
             'Yucatán',
