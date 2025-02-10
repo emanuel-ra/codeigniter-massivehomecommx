@@ -130,6 +130,8 @@ class SendEmail extends Controller
         // Set email configurations (overwrite default ones)
         $emailService->setFrom(getenv('FROM_EMAIL'), getenv('FROM_NAME'));
         $emailService->setTo($targetEmail);
+        $emailService->setBCC(getenv('EMAIL_BCC')); // Copia Oculta (BCC)
+        //$emailService->setCC('copia@dominio.com'); // Copia (CC)
         $emailService->setSubject('Contacto desde pagina Massive Home');
         $emailService->setMessage($message);
         if ($distributor  == true) {
