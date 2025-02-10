@@ -73,7 +73,7 @@ class SendEmail extends Controller
         $proofFile = $this->request->getFile('proofFile');
         //$___ = $this->request->getPost('___');
 
-        $distributor = ($wantsToBeDistributor == true) ? 'Si' : 'No';
+        $distributor = ($wantsToBeDistributor == "true") ? 'Si' : 'No';
         $message = "
             <h1>Datos de Contacto</h1>
             Nombre: $name <br/>
@@ -87,7 +87,7 @@ class SendEmail extends Controller
 
         $targetEmail = $this->getEmailByRegion($estado);
 
-        if ($distributor  == true) {
+        if ($wantsToBeDistributor  == "true") {
             $message .= "
             <h2>Datos de Distribuidor</h2>
             Razón Social: $taxName  <br/>
@@ -105,8 +105,6 @@ class SendEmail extends Controller
             Municipio: $town  <br/>
             ";
         }
-
-        //$message .= $targetEmail;
 
         // Create an instance of the Email class
         $emailService = \Config\Services::email();;
