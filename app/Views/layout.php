@@ -38,6 +38,7 @@
 
 <body>
     <?= view('sections/header'); ?>
+    <?= view('sections/mobileNav'); ?>
     <main>
         <?= $this->renderSection('content') ?>
     </main>
@@ -47,6 +48,8 @@
 
 
     <?= view('sections/footer'); ?>
+
+    <script src="<?= base_url('/assets/js/utils.js') ?>"></script>
 </body>
 
 </html>

@@ -29,6 +29,7 @@
 
             <div class="flex items-center gap-4">
                 <button
+                    onclick="toggleMenu()"
                     class="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
                     <span class="sr-only">Toggle menu</span>
                     <svg
