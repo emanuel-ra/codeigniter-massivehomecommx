@@ -11,7 +11,7 @@
                 <li class="w-full block hover:bg-slate-500 hover:text-white p-2"><a class="w-full block" href="<?= base_url() ?>">Inicio</a></li>
                 <li class="w-full block hover:bg-slate-500 hover:text-white p-2"><a class="w-full block" href="<?= base_url('/products') ?>">Productos</a></li>
                 <li class="w-full block hover:bg-slate-500 hover:text-white p-2"><a class="w-full block" href="<?= base_url('/contact') ?>">Contactos</a></li>
-                <li class="w-full block hover:bg-slate-500 hover:text-white p-2"><a class="w-full block" target="_blank" href="https://linkbits.larksuite.com/share/base/form/shruszHIle2siCK5MVDuKY6q84e">Devoluciones</a></li>
+
             </ul>
         </div>
     </div>
