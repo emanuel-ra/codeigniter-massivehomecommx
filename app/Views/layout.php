@@ -32,12 +32,12 @@
     <meta name="copyright" content="© <?= date('Y') ?> Massive Home. Todos los derechos reservados." />
 
 
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="<?= base_url() ?>/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="<?= base_url() ?>/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url() ?>/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MassiveHome" />
+    <link rel="manifest" href="<?= base_url() ?>/site.webmanifest" />
 
 
     <link href="<?= base_url('/assets/css/app.css') ?>" rel="stylesheet">
