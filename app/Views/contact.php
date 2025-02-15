@@ -258,9 +258,26 @@
             <blockquote class="text-lg mt-4">
                 Encuentra tu sucursal más cercana y visítanos hoy mismo. ¡Te esperamos!
             </blockquote>
+
+            <div>
+                <label for="HeadlineAct" class="block text-sm font-medium text-gray-900"> Ciudad </label>
+                <select
+                    id="citySelect"
+                    onchange="filterBranch(this.value)"
+                    class="mt-1.5 rounded-lg border-gray-300 text-gray-700 border ">
+                    <option value="">Todas</option>
+                    <option value="city-MX-JAL">Guadalajara</option>
+                    <option value="city-MX-NLE">Monterrey</option>
+                    <option value="city-MX-CMX">CDMX</option>
+                </select>
+            </div>
+
             <div class="flex justify-center flex-wrap gap-8">
                 <?php foreach ($branches as $branch): ?>
-                    <address class="flex flex-col md:w-80 bg-slate-200/50 p-7 rounded-lg shadow-md shadow-slate-200 ">
+                    <?php
+                    $iso = $branch["ISO3166-2-lvl4"]
+                    ?>
+                    <address class="flex flex-col md:w-80 bg-slate-200/50 p-7 rounded-lg shadow-md shadow-slate-200 branches-addresses city-<?= $iso ?>">
                         <h2 class="text-xl font-semibold"><?= $branch['name'] ?></h2>
                         <blockquote><?= $branch['address'] ?></blockquote>
                     </address>
