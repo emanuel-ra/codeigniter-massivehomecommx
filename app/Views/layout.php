@@ -14,7 +14,7 @@
     <!-- Meta Open Graph (Para redes sociales, especialmente Facebook y WhatsApp) -->
     <meta property="og:title" content="Massive Home - Importador Directo de las Mejores Marcas en Tecnología" />
     <meta property="og:description" content="Encuentra bocinas, iluminación LED, cámaras WiFi, audífonos, cargadores y más al mejor precio. Compra directo del importador." />
-    <meta property="og:image" content="<?= base_url() ?>/images/RAMON-CORONA-148.webp" />
+    <meta property="og:image" content="<?= base_url() ?>assets/images/RAMON-CORONA-148.webp" />
     <meta property="og:url" content="<?= base_url() ?>" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Massive Home - Importador de Tecnología" />
     <meta name="twitter:description" content="Fabricantes e importadores directos de las mejores marcas en tecnología. Encuentra bocinas, iluminación LED, cámaras WiFi, audífonos y más." />
-    <meta name="twitter:image" content="<?= base_url() ?>/images/RAMON-CORONA-148.webp" />
+    <meta name="twitter:image" content="<?= base_url() ?>assets/images/RAMON-CORONA-148.webp" />
 
     <!-- Meta Canonical (Para evitar contenido duplicado en Google) -->
     <link rel="canonical" href="<?= base_url() ?>" />
