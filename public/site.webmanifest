@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Massive Home",
+  "short_name": "Massive Home",
   "icons": [
     {
       "src": "/massivehome/web-app-manifest-192x192.png",
