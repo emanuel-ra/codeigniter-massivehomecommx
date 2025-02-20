@@ -44,6 +44,6 @@
         </div>
     </div>
     <div>
-        <img src="<?= base_url('/assets/images/brands-banner.webp') ?>" alt="Fabricantes e importadores directos de las marcas megaluz, link bits, AEK Cyber, Cozyna, entre otras" />
+        <img src="<?= base_url('/assets/images/MASSIVE_HOME_TOP_BANNER.webp') ?>" alt="Fabricantes e importadores directos de las marcas megaluz, link bits, AEK Cyber, Cozyna, entre otras" />
     </div>
 </header>
