@@ -30,6 +30,7 @@ class Sitemap extends Controller
         // Otras páginas dinámicas desde la base de datos
         foreach ($products as $product) {
             $sitemap .= '<url><loc>' . base_url("product/" . $product['id']) . '</loc></url>';
+            $sitemap .= '<url><loc>' . base_url("products?search=" . $product['product_code2']) . '</loc></url>';
         }
 
         $sitemap .= '</urlset>';
