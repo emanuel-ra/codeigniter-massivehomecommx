@@ -50,10 +50,6 @@
         <?= $this->renderSection('content') ?>
     </main>
 
-    <?= view('scripts/google-analytics'); ?>
-
-
-
     <?= view('sections/footer'); ?>
 
     <script src="<?= base_url('/assets/js/utils.js') ?>"></script>
