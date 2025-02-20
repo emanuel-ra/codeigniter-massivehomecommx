@@ -31,6 +31,12 @@ class Sitemap extends Controller
         foreach ($products as $product) {
             $sitemap .= '<url><loc>' . base_url("product/" . $product['id']) . '</loc></url>';
             $sitemap .= '<url><loc>' . base_url("products?search=" . $product['product_code2']) . '</loc></url>';
+
+            $name = $product['nameProduct'];
+            $words = explode(" ", $name);
+            foreach ($words as $word) {
+                $sitemap .= '<url><loc>' . base_url("products?search=" . $word) . '</loc></url>';
+            }
         }
 
         $sitemap .= '</urlset>';
