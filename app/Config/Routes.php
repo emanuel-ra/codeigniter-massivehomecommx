@@ -12,3 +12,4 @@ $routes->get('/product/(:num)', 'Product::index/$1');
 
 $routes->get('/contact', 'Contact::index');
 $routes->post('/contact/email', 'SendEmail::submit');
+$routes->get('sitemap.xml', 'Sitemap::index');

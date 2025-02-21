@@ -73,7 +73,7 @@ class SendEmail extends Controller
         $proofFile = $this->request->getFile('proofFile');
         //$___ = $this->request->getPost('___');
 
-        $distributor = ($wantsToBeDistributor == true) ? 'Si' : 'No';
+        $distributor = ($wantsToBeDistributor == "true") ? 'Si' : 'No';
         $message = "
             <h1>Datos de Contacto</h1>
             Nombre: $name <br/>
@@ -85,9 +85,9 @@ class SendEmail extends Controller
            
         ";
 
-        $targetEmail = $this->getEmailByRegion($estado);
+        $targetEmail = ($email == getenv('EMAIL_DEV')) ? getenv('EMAIL_DEV') : $this->getEmailByRegion($estado);
 
-        if ($distributor  == true) {
+        if ($wantsToBeDistributor  == "true") {
             $message .= "
             <h2>Datos de Distribuidor</h2>
             Razón Social: $taxName  <br/>
@@ -105,8 +105,6 @@ class SendEmail extends Controller
             Municipio: $town  <br/>
             ";
         }
-
-        $message .= $targetEmail;
 
         // Create an instance of the Email class
         $emailService = \Config\Services::email();;
@@ -129,7 +127,9 @@ class SendEmail extends Controller
 
         // Set email configurations (overwrite default ones)
         $emailService->setFrom(getenv('FROM_EMAIL'), getenv('FROM_NAME'));
-        $emailService->setTo('programador@massivehome.com.mx');
+        $emailService->setTo($targetEmail);
+        $emailService->setBCC(getenv('EMAIL_BCC')); // Copia Oculta (BCC)
+        $emailService->setCC('programador@masivehome.com'); // Copia (CC)
         $emailService->setSubject('Contacto desde pagina Massive Home');
         $emailService->setMessage($message);
         if ($distributor  == true) {
@@ -171,10 +171,13 @@ class SendEmail extends Controller
             return redirect()->back();
             //echo 'Email sent successfully!';
         } else {
-            echo 'Email failed to send!';
-            session()->setFlashdata('messageError', 'Error inesperado al enviar correo, intente mas tarde!');
             // Debugging: print detailed error messages
-            //echo $emailService->printDebugger();
+            if ($email == getenv('EMAIL_DEV')) {
+                echo $emailService->printDebugger();
+            } else {
+                session()->setFlashdata('messageError', 'Error inesperado al enviar correo, intente mas tarde!');
+                return redirect()->back();
+            }
         }
     }
     private function getRules(): array
@@ -214,7 +217,8 @@ class SendEmail extends Controller
     }
     private function getEmailByRegion($region)
     {
-        $NorthwestEmail = "ventas13@massivehome.com.mx";
+        //$NorthwestEmail = "ventas13@massivehome.com.mx";
+        $NorthwestEmail = "ventas1@massivehome.com.mx";
         $Northwest = array(
             'Baja California',
             'Baja California Sur',
@@ -225,7 +229,8 @@ class SendEmail extends Controller
             'Sonora',
         );
 
-        $NorthEmail = "karina.cordero@linkbits.online";
+        //$NorthEmail = "karina.cordero@linkbits.online";
+        $NorthEmail = "contacto@massivehome.com.mx";
         $North = array(
             'Chihuahua',
             'Durango',
@@ -236,7 +241,8 @@ class SendEmail extends Controller
             'Coahuila',
         );
 
-        $CenterEmail = "adriana.aviles@linkbits.online";
+        //$CenterEmail = "adriana.aviles@linkbits.online";
+        $CenterEmail = "ventas5@massivehome.com.mx";
         $Center = array(
             'Hidalgo',
             'Ciudad de México',
@@ -250,7 +256,8 @@ class SendEmail extends Controller
             'Tlaxcala',
         );
 
-        $SuresteEmail = "marco.zamoratey1@megaluz.online";
+        //$SuresteEmail = "marco.zamoratey1@megaluz.online";
+        $SuresteEmail = "info@massivehome.com.mx";
         $Sureste  = array(
             'Campeche',
             'Yucatán',

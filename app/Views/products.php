@@ -5,18 +5,10 @@
 
 <section>
     <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-        <!-- <header>
-            <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection</h2>
 
-            <p class="mt-4 max-w-md text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
-                dicta incidunt est ipsam, officia dolor fugit natus?
-            </p>
-        </header> -->
-
-        <form class="mt-8 sm:flex sm:items-center sm:justify-between">
+        <form method="get" class="mt-8 sm:flex sm:items-center sm:justify-between">
             <div class="block sm:hidden">
-                <button
+                <!-- <button
                     class="flex cursor-pointer items-center gap-2 border-b border-gray-400 pb-1 text-gray-900 transition hover:border-gray-600">
                     <span class="text-sm font-medium"> Filters & Sorting </span>
 
@@ -29,10 +21,45 @@
                         class="size-4 rtl:rotate-180">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
-                </button>
+                </button> -->
             </div>
 
-            <div class="hidden sm:flex sm:gap-4">
+            <div class="flex flex-col sm:flex-row gap-4">
+
+                <div class="relative">
+                    <div class="relative border rounded">
+                        <label for="Search" class="sr-only"> Search </label>
+
+                        <input
+                            type="text"
+                            id="Search"
+                            name="search"
+                            value="<?= $search ?>"
+                            placeholder="Search for..."
+                            class="w-full rounded-md border-gray-200 py-2.5 px-2.5 pe-10 shadow-xs sm:text-sm" />
+
+                        <span class="absolute inset-y-0 end-0 grid w-10 place-content-center">
+                            <button type="button" class="text-gray-600 hover:text-gray-700">
+                                <span class="sr-only">Search</span>
+
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="size-4">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </button>
+                        </span>
+                    </div>
+
+                </div>
+
                 <div class="relative">
                     <details class="group [&_summary::-webkit-details-marker]:hidden">
                         <summary
@@ -103,39 +130,7 @@
                     </details>
                 </div>
 
-                <div class="relative">
-                    <div class="relative border rounded">
-                        <label for="Search" class="sr-only"> Search </label>
 
-                        <input
-                            type="text"
-                            id="Search"
-                            name="search"
-                            value="<?= $search ?>"
-                            placeholder="Search for..."
-                            class="w-full rounded-md border-gray-200 py-2.5 px-2.5 pe-10 shadow-xs sm:text-sm" />
-
-                        <span class="absolute inset-y-0 end-0 grid w-10 place-content-center">
-                            <button type="button" class="text-gray-600 hover:text-gray-700">
-                                <span class="sr-only">Search</span>
-
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    class="size-4">
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                                </svg>
-                            </button>
-                        </span>
-                    </div>
-
-                </div>
 
                 <!-- <div class="relative">
                     <details class="group [&_summary::-webkit-details-marker]:hidden">
@@ -214,10 +209,15 @@
 
         <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <?php foreach ($products as $product): ?>
+                <?php
+                $img = ($product['ImgWebp'] == '') ? $product['Img'] : $product['ImgWebp'];
+                $path = ($product['ImgWebp'] == '') ? 'images/productos/' : 'images/productos-webp/';
+                ?>
                 <li>
                     <a href="<?= base_url('/product/' . $product['id']) ?>" class="group block overflow-hidden">
                         <img
-                            src="https://massivehome.com.mx/images/productos/<?= $product['Img'] ?>"
+                            src="https://massivehome.com.mx/<?= $path ?><?= $img ?>"
+                            onerror="this.onerror=null; this.src='https://massivehome.com.mx/images/productos/<?= $product['Img'] ?>';"
                             alt="<?= $product['nameProduct'] ?>"
                             class="h-[300px] w-full  transition duration-500 group-hover:scale-105 sm:h-[300px]" />
 

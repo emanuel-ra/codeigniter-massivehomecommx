@@ -10,8 +10,15 @@
         <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
 
             <?php foreach ($products as $index => $item): ?>
+                <?php
+                $img = ($item->ImgWebp == '') ? $item->Img : $item->ImgWebp;
+                $path = ($item->ImgWebp == '') ? 'images/productos/' : 'images/productos-webp/';
+                ?>
                 <a href="<?= base_url('/product/' . $item->id) ?>" class="group">
-                    <img src="https://massivehome.com.mx/images/productos/<?= $item->Img ?>" alt="<?= $item->nameProduct ?>" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+                    <img src="https://massivehome.com.mx/<?= $path ?><?= $img ?>"
+                        alt="<?= $item->nameProduct ?>"
+                        onerror="this.onerror=null; this.src='https://massivehome.com.mx/images/productos/<?= $item->Img ?>';"
+                        class="aspect-square w-full rounded-lg bg-gray-200 group-hover:opacity-75 ">
                     <h3 class="mt-4 text-sm text-gray-700"><?= $item->nameProduct ?></h3>
                     <p class="mt-1 text-lg font-medium text-gray-900"><?= $item->product_code2 ?></p>
                 </a>

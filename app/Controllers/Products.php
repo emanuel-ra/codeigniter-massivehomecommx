@@ -39,7 +39,6 @@ class Products extends BaseController
         ];
         return view('products', $data);
     }
-
     private function getCategories(): array
     {
         $model = new \App\Models\CategoryModel();

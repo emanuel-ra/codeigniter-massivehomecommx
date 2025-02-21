@@ -20,15 +20,14 @@
                         <a class="text-gray-500 transition hover:text-gray-500/75" href="<?= base_url('/contact') ?>"> Contacto </a>
                     </li>
 
-                    <li>
-                        <a class="text-gray-500 transition hover:text-gray-500/75" target="_blank" href="https://linkbits.larksuite.com/share/base/form/shruszHIle2siCK5MVDuKY6q84e"> Devoluciones </a>
-                    </li>
+
 
                 </ul>
             </nav>
 
             <div class="flex items-center gap-4">
                 <button
+                    onclick="toggleMenu()"
                     class="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
                     <span class="sr-only">Toggle menu</span>
                     <svg
@@ -45,6 +44,6 @@
         </div>
     </div>
     <div>
-        <img src="<?= base_url('/assets/images/brands-banner.webp') ?>" alt="Fabricantes e importadores directos de las marcas megaluz, link bits, AEK Cyber, Cozyna, entre otras" />
+        <img src="<?= base_url('/assets/images/MASSIVE_HOME_TOP_BANNER.webp') ?>" alt="Fabricantes e importadores directos de las marcas megaluz, link bits, AEK Cyber, Cozyna, entre otras" />
     </div>
 </header>
