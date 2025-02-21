@@ -8,7 +8,7 @@ class ProductModel extends Model
 {
     protected $table = 'products';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['name', 'description', /*'price',*/ 'created_at', 'updated_at'];
+    protected $allowedFields = ['name', 'description', 'ImgWebp', 'created_at', 'updated_at'];
     protected $useTimestamps = true;
 
     // Optional: Define validation rules

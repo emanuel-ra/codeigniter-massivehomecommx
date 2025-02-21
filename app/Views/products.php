@@ -209,10 +209,15 @@
 
         <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <?php foreach ($products as $product): ?>
+                <?php
+                $img = ($product['ImgWebp'] == '') ? $product['Img'] : $product['ImgWebp'];
+                $path = ($product['ImgWebp'] == '') ? 'images/productos/' : 'images/productos-webp/';
+                ?>
                 <li>
                     <a href="<?= base_url('/product/' . $product['id']) ?>" class="group block overflow-hidden">
                         <img
-                            src="https://massivehome.com.mx/images/productos/<?= $product['Img'] ?>"
+                            src="https://massivehome.com.mx/<?= $path ?><?= $img ?>"
+                            onerror="this.onerror=null; this.src='https://massivehome.com.mx/images/productos/<?= $product['Img'] ?>';"
                             alt="<?= $product['nameProduct'] ?>"
                             class="h-[300px] w-full  transition duration-500 group-hover:scale-105 sm:h-[300px]" />
 
