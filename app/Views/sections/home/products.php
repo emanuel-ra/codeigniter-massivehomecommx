@@ -23,7 +23,7 @@
 
         <div class="mb-5 flex justify-center text-center py-4">
             <a href="/products" class=" text-slate-800 hover:text-green-600 uppercase font-semibold hover:underline ease-in-out duration-150">
-                Ver mas productos
+                Ver más
             </a>
         </div>
 
