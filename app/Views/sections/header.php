@@ -13,7 +13,7 @@
                     </li>
 
                     <li>
-                        <a class="text-gray-500 transition hover:text-gray-500/75" href="<?= base_url('/products') ?>"> Productos </a>
+                        <a class="text-gray-500 transition hover:text-gray-500/75" href="<?= base_url('/products') ?>"> Categorías </a>
                     </li>
 
                     <li>
@@ -44,6 +44,6 @@
         </div>
     </div>
     <div>
-        <img src="<?= base_url('/assets/images/MASSIVE_HOME_TOP_BANNER.webp') ?>" alt="Fabricantes e importadores directos de las marcas megaluz, link bits, AEK Cyber, Cozyna, entre otras" />
+        <img src="<?= base_url('/assets/images/MASSIVE_HOME_TOP_BANNER.webp') ?>" alt="Fabricantes e importadores directos de las marcas MegaLuz, Link Bits, AEK Cyber CYBER, KBroad, Cozyna, Musicord" />
     </div>
 </header>
