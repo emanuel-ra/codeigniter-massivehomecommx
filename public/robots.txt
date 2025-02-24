@@ -1,4 +1,15 @@
 User-agent: *
-Disallow: 
+Disallow: /application/
+Disallow: /system/
+Disallow: /writable/
+Disallow: /tests/
+Disallow: /vendor/
+Disallow: /public/
+Disallow: /cache/
+Disallow: /logs/
+
+# Permitir acceso a archivos CSS, JS e imágenes
+Allow: /assets/
+Allow: /uploads/
 
 Sitemap: https://massivehome.com.mx/sitemap.xml
