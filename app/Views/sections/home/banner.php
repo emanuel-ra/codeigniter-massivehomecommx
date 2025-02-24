@@ -8,8 +8,20 @@
     <div class="carousel flex transition-transform duration-500 ease-in-out">
 
         <?php foreach ($carrouselItems as $index => $item): ?>
+            <?php
+            $file = $item->img;
+            $pathInfo = pathinfo($file);
+            $filename = $pathInfo['filename'];
+            $extension = $pathInfo['extension'];
+            $webp = $filename . '.webp';
+            $original = $filename . '.' . $extension;
+            ?>
             <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
-                <img src="https://massivehome.com.mx/images/carouselbanner/<?= $item->img ?>" class="d-block w-100" alt="<?= $item->img ?>">
+                <img
+                    src="https://massivehome.com.mx/images/carouselbanner/<?= $webp ?>"
+                    onerror="this.onerror=null; this.src='https://massivehome.com.mx/images/carouselbanner/<?= $original ?>';"
+                    class="d-block w-100"
+                    alt="<?= $item->img ?>">
             </div>
         <?php endforeach; ?>
 
