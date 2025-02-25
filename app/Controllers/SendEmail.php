@@ -85,7 +85,10 @@ class SendEmail extends Controller
            
         ";
 
-        $targetEmail = ($email == getenv('EMAIL_DEV')) ? getenv('EMAIL_DEV') : $this->getEmailByRegion($estado);
+        //$targetEmail = ($email == getenv('EMAIL_DEV')) ? getenv('EMAIL_DEV') : $this->getEmailByRegion($estado);
+
+        $targetEmail = ($wantsToBeDistributor == "true") ? $this->getEmailByRegion($estado) : 'ventas1@massivehome.com.mx';
+
 
         if ($wantsToBeDistributor  == "true") {
             $message .= "
@@ -129,12 +132,11 @@ class SendEmail extends Controller
         $emailService->setFrom(getenv('FROM_EMAIL'), getenv('FROM_NAME'));
         $emailService->setTo($targetEmail);
         $emailService->setBCC(getenv('EMAIL_BCC')); // Copia Oculta (BCC)
-        $emailService->setCC('programador@masivehome.com'); // Copia (CC)
+        //$emailService->setCC('programador@masivehome.com.mx'); // Copia (CC)
         $emailService->setSubject('Contacto desde pagina Massive Home');
         $emailService->setMessage($message);
         if ($distributor  == true) {
             // Attach the file to the email
-
             if ($ineFile && $ineFile->isValid() && !$ineFile->hasMoved()) {
                 // Move the uploaded file to the 'uploads' directory
                 $ineFile->move($this->uploadPath);
