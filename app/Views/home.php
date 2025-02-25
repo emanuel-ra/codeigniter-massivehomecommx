@@ -1,5 +1,7 @@
 <section>
-    <?= $this->extend('layout') ?>
+    <section>
+        <?= $this->extend('layout') ?>
+    </section>
 
     <?= $this->section('content') ?>
     <?= view('sections/home/banner') ?>
@@ -8,6 +10,8 @@
         <?= view('sections/home/products') ?>
     </main>
 
-    <?= view('sections/home/catalogs') ?>
+    <section>
+        <?= view('sections/home/catalogs') ?>
+    </section>
     <?= $this->endSection() ?>
 </section>

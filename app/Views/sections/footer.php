@@ -6,10 +6,12 @@
                     <img src="<?= base_url('/assets/images/logo-massivehome.webp') ?>" alt="Fabricantes e importadores directos de las marcas megaluz, link bits, AEK Cyber, Cozyna, entre otras" />
                 </div>
 
-                <!-- <p class="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa
-                    cum itaque neque.
-                </p> -->
+                <p class="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
+                    Con más de 20 años de experiencia, diseñamos y desarrollamos soluciones innovadoras para nuestros clientes. Como fabricante líder en China, contamos con una línea de producción que abarca el 95% de los repuestos en nuestra propia fábrica, asegurando calidad y control total en cada etapa del proceso.
+                </p>
+                <p class="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
+                    Nos comprometemos con la satisfacción del cliente, enfocándonos en la última tecnología del mercado para ofrecer productos adecuados y evolucionar junto a nuestros clientes.
+                </p>
 
                 <ul class="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
                     <li>
@@ -200,7 +202,7 @@
                         <li>
                             <a
                                 class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                                href="#">
+                                href="mailto:ventas@massivehome.com.mx">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     class="size-5 shrink-0 text-gray-900"
@@ -221,7 +223,7 @@
                         <li>
                             <a
                                 class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                                href="#">
+                                href="tel:3336134587">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     class="size-5 shrink-0 text-gray-900"
@@ -235,7 +237,7 @@
                                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                 </svg>
 
-                                <span class="flex-1 text-gray-700">33 3613 4587</span>
+                                <span class="flex-1 text-gray-700"> (+52) 33 3613 4587</span>
                             </a>
                         </li>
 
@@ -269,10 +271,10 @@
 
         <div class="mt-12 border-t border-gray-100 pt-6">
             <div class="text-center sm:flex sm:justify-between sm:text-left">
-                <!-- <p class="text-sm text-gray-500">
-                    <span class="block sm:inline">All rights reserved.</span>
+                <p class="text-sm text-gray-500">
+                    <span class="block sm:inline">Todos los derechos reservados.</span>
 
-                    <a
+                    <!-- <a
                         class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
                         href="#">
                         Terms & Conditions
@@ -284,8 +286,8 @@
                         class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
                         href="#">
                         Privacy Policy
-                    </a>
-                </p> -->
+                    </a> -->
+                </p>
 
                 <p class="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">&copy; <?= date('Y') ?> Massive Home</p>
             </div>

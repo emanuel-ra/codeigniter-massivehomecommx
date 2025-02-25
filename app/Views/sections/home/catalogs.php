@@ -1,4 +1,4 @@
-<div class="bg-white">
+<article class="bg-white">
     <div class="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8">
         <h2 class="sr-only">Catálogos</h2>
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-3">
@@ -13,4 +13,4 @@
             <?php endforeach; ?>
         </div>
     </div>
-</div>
+</article>
