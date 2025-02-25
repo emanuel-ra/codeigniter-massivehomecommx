@@ -39,6 +39,8 @@
     <meta name="apple-mobile-web-app-title" content="MassiveHome" />
     <link rel="manifest" href="<?= base_url() ?>/site.webmanifest" />
 
+    <!-- Meta Tag para Facebook (para evitar que se cacheen) -->
+    <meta http-equiv="refresh" content="30;url=<?= base_url() ?>">
 
     <link href="<?= base_url('/assets/css/app.css') ?>" rel="stylesheet">
 </head>
