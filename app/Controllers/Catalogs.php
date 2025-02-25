@@ -9,7 +9,7 @@ class Catalogs extends BaseController
     {
         $filename = "CATALOGO-ILUMINACION-2024.pdf";
         /// Ruta al directorio donde están los PDFs
-        $ruta = WRITEPATH . 'pdf\\' . $filename;
+        $ruta = WRITEPATH . 'pdf' . DIRECTORY_SEPARATOR . $filename;
 
         // Verificar si el archivo existe
         if (file_exists($ruta)) {
@@ -22,7 +22,7 @@ class Catalogs extends BaseController
     {
         $filename = "CATALOGO-VENTILADORES-2024.pdf";
         /// Ruta al directorio donde están los PDFs
-        $ruta = WRITEPATH . 'pdf\\' . $filename;
+        $ruta = WRITEPATH . 'pdf' . DIRECTORY_SEPARATOR . $filename;
 
         // Verificar si el archivo existe
         if (file_exists($ruta)) {
@@ -35,7 +35,9 @@ class Catalogs extends BaseController
     {
         $filename = "CATALOGO-CANDILES-2024.pdf";
         /// Ruta al directorio donde están los PDFs
-        $ruta = WRITEPATH . 'pdf\\' . $filename;
+        $ruta = WRITEPATH . 'pdf' . DIRECTORY_SEPARATOR . $filename;
+
+        log_message('debug', 'Ruta del archivo: ' . $ruta);
 
         // Verificar si el archivo existe
         if (file_exists($ruta)) {
