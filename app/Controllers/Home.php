@@ -21,6 +21,7 @@ class Home extends BaseController
 
             $data['carrouselItems'] = $carrouselItems->getResult();
             $data['products'] = $products->getResult();
+            $data['catalogs'] = $this->getCatalogs();
             return view('home', $data);
         } catch (\Exception $e) {
             // Log the error message
@@ -29,5 +30,30 @@ class Home extends BaseController
             echo 'Error: ' . $e->getMessage();
             return '';
         }
+    }
+    private function getCatalogs()
+    {
+        return array(
+            array(
+                'name' => 'Catalogo de Iluminación LED',
+                'img' => 'assets/images/catalogo-iluminacion-led-2024.webp',
+                'url' => 'pdf/iluminacion-led'
+            ),
+            array(
+                'name' => 'Catalogo de Ventiladores de Techo',
+                'img' => 'assets/images/catalogo-ventiladores-de-techo-2024.webp',
+                'url' => 'pdf/ventiladores-de-techo'
+            ),
+            array(
+                'name' => 'Catalogo de Candiles',
+                'img' => 'assets/images/catalogo-candiles-2024.webp',
+                'url' => 'pdf/candiles'
+            ),
+            // array(
+            //     'name' => 'Gadgets',
+            //     'img' => 'assets/images/catalogs/gadgets.webp',
+            //     'url' => 'gadgets'
+            // ),
+        );
     }
 }
