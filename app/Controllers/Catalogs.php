@@ -37,8 +37,6 @@ class Catalogs extends BaseController
         /// Ruta al directorio donde están los PDFs
         $ruta = WRITEPATH . 'pdf' . DIRECTORY_SEPARATOR . $filename;
 
-        log_message('debug', 'Ruta del archivo: ' . $ruta);
-
         // Verificar si el archivo existe
         if (file_exists($ruta)) {
             return $this->response->download($ruta, null);
