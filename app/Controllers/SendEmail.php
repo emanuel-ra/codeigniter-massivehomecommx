@@ -87,7 +87,7 @@ class SendEmail extends Controller
 
         //$targetEmail = ($email == getenv('EMAIL_DEV')) ? getenv('EMAIL_DEV') : $this->getEmailByRegion($estado);
 
-        $targetEmail = ($wantsToBeDistributor == "true") ? $this->getEmailByRegion($estado) : 'ventas1@massivehome.com.mx';
+        $targetEmail = ($wantsToBeDistributor == "true") ? $this->getEmailByRegion($estado) : 'ventas@massivehome.com.mx';
 
 
         if ($wantsToBeDistributor  == "true") {
