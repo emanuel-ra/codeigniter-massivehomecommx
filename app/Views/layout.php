@@ -46,9 +46,9 @@
 <body>
     <?= view('sections/header'); ?>
     <?= view('sections/mobileNav'); ?>
-    <main>
-        <?= $this->renderSection('content') ?>
-    </main>
+    
+    <?= $this->renderSection('content') ?>
+    
 
     <?= view('sections/footer'); ?>
 
