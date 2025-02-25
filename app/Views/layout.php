@@ -18,6 +18,9 @@
     <meta property="og:url" content="<?= base_url() ?>" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Massive Home" />
+    <meta property="og:updated_time" content="<?= date('Y-m-d') ?>" />
+
 
     <!-- Twitter Card (Para mejorar la vista en Twitter/X) -->
     <meta name="twitter:card" content="summary_large_image" />
