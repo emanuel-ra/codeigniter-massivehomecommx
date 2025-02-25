@@ -22,7 +22,7 @@
     <!-- Twitter Card (Para mejorar la vista en Twitter/X) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Massive Home - Importador de Tecnología" />
-    <meta name="twitter:description" content="Fabricantes e importadores directos de las mejores marcas en tecnología. Encuentra bocinas, iluminación LED, cámaras WiFi, audífonos y más." />
+    <meta name="twitter:description" content="Con más de 20 años de experiencia, diseñamos y desarrollamos soluciones innovadoras para nuestros clientes. Como fabricante líder en China, contamos con una línea de producción que abarca el 95% de los repuestos en nuestra propia fábrica, asegurando calidad y control total en cada etapa del proceso. Nos comprometemos con la satisfacción del cliente, enfocándonos en la última tecnología del mercado para ofrecer productos adecuados y evolucionar junto a nuestros clientes." />
     <meta name="twitter:image" content="<?= base_url() ?>assets/images/RAMON-CORONA-148.webp" />
 
     <!-- Meta Canonical (Para evitar contenido duplicado en Google) -->
@@ -46,9 +46,9 @@
 <body>
     <?= view('sections/header'); ?>
     <?= view('sections/mobileNav'); ?>
-    
+
     <?= $this->renderSection('content') ?>
-    
+
 
     <?= view('sections/footer'); ?>
 
