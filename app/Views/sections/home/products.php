@@ -1,6 +1,6 @@
 <div class="bg-white">
-    <div class="mx-auto mt-2 px-4 ease-in-out duration-150">
-        <!-- max-w-2xl px-4 py-4 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8 -->
+    <div class="mx-auto  max-w-2xl px-4 py-4 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8">
+
         <h2 class="sr-only">Products</h2>
 
         <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-1 ">
