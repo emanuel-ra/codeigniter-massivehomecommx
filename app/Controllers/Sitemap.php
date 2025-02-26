@@ -26,6 +26,7 @@ class Sitemap extends Controller
         $sitemap .= '<url><loc>' . base_url() . '</loc></url>';
         $sitemap .= '<url><loc>' . base_url('products/') . '</loc></url>';
         $sitemap .= '<url><loc>' . base_url('contact/') . '</loc></url>';
+        $sitemap .= '<url><loc>' . base_url('stores/') . '</loc></url>';
 
         $sitemap .= '<url><loc>' . base_url('pdf/iluminacion-led') . '</loc></url>';
         $sitemap .= '<url><loc>' . base_url('pdf/ventiladores-de-techo') . '</loc></url>';
