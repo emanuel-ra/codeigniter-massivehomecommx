@@ -14,7 +14,7 @@ class Sitemap extends Controller
         $productsModel = new
             \App\Models\ProductModel();;
         $products = $productsModel->where('statusId', 1)->findAll(); // O la consulta necesaria
-
+        $lastmod = '<lastmod>' . date('Y-m-d') . '</lastmod>';
         // Cabecera XML
         //header("Content-Type: application/xml; charset=UTF-8");
 
@@ -23,17 +23,15 @@ class Sitemap extends Controller
         $sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">';
 
         // Página principal
-        $sitemap .= '<url><loc>' . base_url() . '</loc></url>';
-        $sitemap .= '<url><loc>' . base_url('products') . '</loc></url>';
-        $sitemap .= '<url><loc>' . base_url('contact') . '</loc></url>';
-        $sitemap .= '<url><loc>' . base_url('stores') . '</loc></url>';
+        $sitemap .= '<url><loc>' . base_url() . '</loc>' . $lastmod . '</url>';
+        $sitemap .= '<url><loc>' . base_url('products') . '</loc>' . $lastmod . '</url>';
+        $sitemap .= '<url><loc>' . base_url('contact') . '</loc>' . $lastmod . '</url>';
+        $sitemap .= '<url><loc>' . base_url('stores') . '</loc>' . $lastmod . '</url>';
 
         $sitemap .= '<url><loc>' . base_url('pdf/iluminacion-led') . '</loc></url>';
         $sitemap .= '<url><loc>' . base_url('pdf/ventiladores-de-techo') . '</loc></url>';
         $sitemap .= '<url><loc>' . base_url('pdf/candiles') . '</loc></url>';
 
-
-        $lastmod = '<lastmod>' . date('Y-m-d') . '</lastmod>';
         // Otras páginas dinámicas desde la base de datos
         foreach ($products as $product) {
             $name = $product['nameProduct'];
