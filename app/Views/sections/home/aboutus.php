@@ -5,14 +5,7 @@
         <div class="grid gap-12 sm:gap-12 md:grid-cols-2">
             <!-- Content -->
             <div class="flex flex-col items-start gap-2">
-                <!-- <div class="flex items-center rounded-md bg-gray-300 px-3 py-1">
-                    <div class="mr-1 h-2 w-2 rounded-full bg-black"></div>
-                    <p class="text-sm">Sunt in et est voluptate veniam et.</p>
-                </div> -->
-                <!-- <p class="text-sm text-gray-500 sm:text-xl">
-                    Qui quis sit dolore sint culpa qui eiusmod consectetur excepteur.
-                </p> -->
-                <!-- Title -->
+
                 <h2 class="mb-6 text-4xl font-bold md:text-6xl md:mb-8">
                     Sobre Nosotros
                 </h2>
