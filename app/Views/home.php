@@ -1,10 +1,11 @@
 <section>
-    <section>
-        <?= $this->extend('layout') ?>
-    </section>
+
+    <?= $this->extend('layout') ?>
 
     <?= $this->section('content') ?>
-    <?= view('sections/home/banner') ?>
+    <section>
+        <?= view('sections/home/banner') ?>
+    </section>
 
     <main>
         <?= view('sections/home/products') ?>

@@ -1,8 +1,8 @@
 <header class="bg-white">
     <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <a class="block text-teal-600" href="#">
-            <span class="sr-only">Home</span>
-            <img src="<?= base_url('/assets/images/logo-massivehome.webp') ?>" alt="Fabricantes e importadores directos de las marcas megaluz, link bits, AEK Cyber, Cozyna, entre otras" />
+            <span class="sr-only">Massive Home</span>
+            <img src="<?= base_url('/assets/images/logo-massivehome.webp') ?>" alt="Fabricantes e importadores directos de las marcas MegaLuz, Link Bits, AEK Cyber, Cozyna, entre otras" />
         </a>
 
         <div class="flex flex-1 items-center justify-end md:justify-between">
@@ -32,13 +32,37 @@
                             Tiendas
                         </a>
                     </li>
-
-
-
                 </ul>
             </nav>
 
             <div class="flex items-center gap-4">
+
+                <form action="<?= base_url('/products') ?>" method="get" class="hidden md:block">
+                    <div class="flex items-center  bg-white rounded-sm border border-gray-200">
+                        <input type="text" name="search" class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Buscar..." />
+
+                        <button class=" flex justify-center items-center px-3 grow ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M21 21l-6 -6" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </form>
+
+                <button
+                    onclick="toggleModalSearching()"
+                    class="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
+                    <span class="sr-only">Search</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M21 21l-6 -6" />
+                    </svg>
+                </button>
+
                 <button
                     onclick="toggleMenu()"
                     class="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
@@ -56,6 +80,7 @@
             </div>
         </div>
     </div>
+
     <div>
         <img src="<?= base_url('/assets/images/MASSIVE_HOME_TOP_BANNER.webp') ?>" alt="Fabricantes e importadores directos de las marcas MegaLuz, Link Bits, AEK Cyber CYBER, KBroad, Cozyna, Musicord" />
     </div>

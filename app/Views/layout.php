@@ -21,7 +21,6 @@
     <meta property="og:site_name" content="Massive Home" />
     <meta property="og:updated_time" content="<?= date('Y-m-d') ?>" />
 
-
     <!-- Twitter Card (Para mejorar la vista en Twitter/X) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Massive Home - Importador de Tecnología" />
@@ -34,7 +33,6 @@
     <meta name="author" content="Massive Home" />
     <meta name="copyright" content="© <?= date('Y') ?> Massive Home. Todos los derechos reservados." />
 
-
     <link rel="icon" type="image/png" href="<?= base_url() ?>/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="<?= base_url() ?>/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -46,11 +44,12 @@
 </head>
 
 <body>
-    <?= view('sections/header'); ?>
     <?= view('sections/mobileNav'); ?>
+    <?= view('sections/modalSearch'); ?>
+    <?= view('sections/header'); ?>
+
 
     <?= $this->renderSection('content') ?>
-
 
     <?= view('sections/footer'); ?>
 
