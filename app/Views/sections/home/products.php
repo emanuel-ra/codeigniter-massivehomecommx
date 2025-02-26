@@ -11,7 +11,7 @@
                 $img = ($item->ImgWebp == '') ? $item->Img : $item->ImgWebp;
                 $path = ($item->ImgWebp == '') ? 'images/productos/' : 'images/productos-webp/';
                 ?>
-                <a href="<?= base_url('/product/' . $item->id) ?>" class="group">
+                <a href="<?= base_url('/product/' . $item->id) ?>" class="group animate-jump-in">
                     <img src="https://massivehome.com.mx/<?= $path ?><?= $img ?>"
                         alt="<?= $item->nameProduct ?>"
                         class="w-full h-auto max-w-full rounded shadow "
