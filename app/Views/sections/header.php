@@ -1,6 +1,6 @@
 <header class="bg-white">
     <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-        <a class="block text-teal-600" href="#">
+        <a class="block text-teal-600" href="<?php base_url() ?>">
             <span class="sr-only">Massive Home</span>
             <img src="<?= base_url('/assets/images/logo-massivehome.webp') ?>" alt="Fabricantes e importadores directos de las marcas MegaLuz, Link Bits, AEK Cyber, Cozyna, entre otras" />
         </a>
