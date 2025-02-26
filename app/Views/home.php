@@ -1,6 +1,17 @@
-<?= $this->extend('layout') ?>
+<section>
+    <section>
+        <?= $this->extend('layout') ?>
+    </section>
 
-<?= $this->section('content') ?>
+    <?= $this->section('content') ?>
     <?= view('sections/home/banner') ?>
-    <?= view('sections/home/products') ?>
-<?= $this->endSection() ?>
+
+    <main>
+        <?= view('sections/home/products') ?>
+    </main>
+
+    <section>
+        <?= view('sections/home/catalogs') ?>
+    </section>
+    <?= $this->endSection() ?>
+</section>

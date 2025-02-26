@@ -27,6 +27,11 @@ class Sitemap extends Controller
         $sitemap .= '<url><loc>' . base_url('products/') . '</loc></url>';
         $sitemap .= '<url><loc>' . base_url('contact/') . '</loc></url>';
 
+        $sitemap .= '<url><loc>' . base_url('pdf/iluminacion-led') . '</loc></url>';
+        $sitemap .= '<url><loc>' . base_url('pdf/ventiladores-de-techo') . '</loc></url>';
+        $sitemap .= '<url><loc>' . base_url('pdf/candiles') . '</loc></url>';
+
+
         $lastmod = '<lastmod>' . date('Y-m-d') . '</lastmod>';
         // Otras páginas dinámicas desde la base de datos
         foreach ($products as $product) {

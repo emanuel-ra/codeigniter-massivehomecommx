@@ -4,5 +4,8 @@
   },
   "scripts": {
     "build": "npx tailwindcss -i ./app/assets/css/app.css -o ./public/assets/css/app.css --watch"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
   }
 }

@@ -9,7 +9,7 @@
         <div class="w-full px-4">
             <ul class="flex flex-col gap-4 justify-center">
                 <li class="w-full block hover:bg-slate-500 hover:text-white p-2"><a class="w-full block" href="<?= base_url() ?>">Inicio</a></li>
-                <li class="w-full block hover:bg-slate-500 hover:text-white p-2"><a class="w-full block" href="<?= base_url('/products') ?>">Productos</a></li>
+                <li class="w-full block hover:bg-slate-500 hover:text-white p-2"><a class="w-full block" href="<?= base_url('/products') ?>">Categorías</a></li>
                 <li class="w-full block hover:bg-slate-500 hover:text-white p-2"><a class="w-full block" href="<?= base_url('/contact') ?>">Contactos</a></li>
 
             </ul>
