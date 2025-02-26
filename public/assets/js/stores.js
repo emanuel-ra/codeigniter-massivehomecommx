@@ -10,8 +10,9 @@ function changeStore(value) {
         "city-MX-NLE": { lat: 25.686614, lng: -100.316113 },
         "city-MX-CMX": { lat: 19.432608, lng: -99.133209 }
     };
-
-    console.log("hey there:", locations[value]);
+    
+    filterBranch(value)
+    
 
     if (map) {
         map.setView([locations[value].lat, locations[value].lng], 13);
@@ -79,6 +80,7 @@ const getLocation = () => {
             //console.log(data.address[key])
             //console.log("Ciudad:", data.address.city || data.address.town);
             changeStore(`city-${data.address[key]}`)
+            filterBranch(`city-${data.address[key]}`)
             document.getElementById("store").value = `city-${data.address[key]}`;
 
         },
@@ -93,5 +95,20 @@ const getLocation = () => {
     }
 
 }
+
+const filterBranch = (filterValue)=>{
+    const items = document.querySelectorAll('.branches-addresses');
+    console.log(filterValue)
+    items.forEach(item => {
+        if (filterValue && !item.classList.contains(filterValue)) {
+            item.classList.add("hidden");
+        } else {
+            item.classList.remove("hidden");
+        }
+    });
+    
+}
+
+
 
 getLocation();

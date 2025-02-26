@@ -254,7 +254,7 @@
     <?php endif; ?>
 
 
-    <div class="flex justify-center items-center">
+    <!-- <div class="flex justify-center items-center">
         <div class="flex flex-col gap-4 w-full lg:w-10/12">
             <h2 class="text-4xl">Sucursales</h2>
             <blockquote class="text-lg mt-4">
@@ -287,7 +287,7 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 </div>
 
 <script src="<?= base_url('/assets/js/contact.js') ?>"></script>

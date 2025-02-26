@@ -18,6 +18,19 @@
                         <option value="city-MX-CMX">CDMX</option>
                     </select>
                 </div>
+
+                <div class="flex justify-center flex-wrap gap-5 mt-2">
+                    <?php foreach ($branches as $branch): ?>
+                        <?php
+                        $iso = $branch["ISO3166-2-lvl4"]
+                        ?>
+                        <address class="flex flex-col md:w-80 bg-slate-200/50 p-7 rounded-lg shadow-md shadow-slate-200 branches-addresses city-<?= $iso ?>">
+                            <h2 class="text-xl font-semibold"><?= $branch['name'] ?></h2>
+                            <blockquote><?= $branch['address'] ?></blockquote>
+                        </address>
+                    <?php endforeach   ?>
+                </div>
+
             </div>
             <div id="map" class="min-h-96 w-full"></div>
         </div>
