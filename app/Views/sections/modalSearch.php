@@ -1,5 +1,5 @@
 <div id="modalSearching" class="absolute bg-black/80 z-10 w-full h-dvh p-2 hidden">
-    <div class="flex flex-col bg-white rounded py-2 w-full h-full shadow-sm p-2">
+    <div class="flex flex-col bg-white rounded py-2 w-full h-full shadow-sm p-2 ">
         <div class="flex justify-end px-4">
             <a href="javascript:void(0)" onclick="toggleModalSearching()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-square-x">

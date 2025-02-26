@@ -14,5 +14,7 @@
     <section>
         <?= view('sections/home/catalogs') ?>
     </section>
+
+    <?= view('sections/home/aboutus') ?>
     <?= $this->endSection() ?>
 </section>

@@ -6,12 +6,12 @@
                     <img src="<?= base_url('/assets/images/logo-massivehome.webp') ?>" alt="Fabricantes e importadores directos de las marcas megaluz, link bits, AEK Cyber, Cozyna, entre otras" />
                 </div>
 
-                <p class="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
+                <!-- <p class="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
                     Con más de 20 años de experiencia, diseñamos y desarrollamos soluciones innovadoras para nuestros clientes. Como fabricante líder en China, contamos con una línea de producción que abarca el 95% de los repuestos en nuestra propia fábrica, asegurando calidad y control total en cada etapa del proceso.
                 </p>
                 <p class="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
                     Nos comprometemos con la satisfacción del cliente, enfocándonos en la última tecnología del mercado para ofrecer productos adecuados y evolucionar junto a nuestros clientes.
-                </p>
+                </p> -->
 
                 <ul class="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
                     <li>
