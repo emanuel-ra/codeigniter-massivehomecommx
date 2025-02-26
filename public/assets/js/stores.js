@@ -76,9 +76,9 @@ const getLocation = () => {
             const data = await response.json();
             //return data;
             //filterBranch(data.ISO3166-2-lvl4)
-            const key = "ISO3166-2-lvl4";
-            
+            const key = "ISO3166-2-lvl4";            
             document.getElementById("store").value = `city-${data.address[key]}`;
+            changeStore(`city-${data.address[key]}`);
         },
         (error) => {
             //return 'NOT_FOUND'
