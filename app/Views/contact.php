@@ -7,9 +7,9 @@
 
             <form action="<?= base_url('/contact/email') ?>" method="post" enctype='multipart/form-data' class="flex justify-center items-center w-full">
                 <div class="flex flex-col gap-4 p-4 w-full lg:w-10/12">
-                    <h2 class="text-4xl">Contáctenos</h2>
+                    <h2 class="text-4xl">¿Quieres ser distribuidor de nuestras marcas?</h2>
                     <blockquote class="text-lg mt-4">
-                        ¿Tienes alguna duda o comentario? ¡Escríbenos! Estamos para ayudarte.
+                        Completa aquí tu solicitud para ser distribuidor de nuestras marcas en tu Estado. Estamos para ayudarte
                     </blockquote>
 
                     <div class="flex flex-col lg:flex-row gap-4 mb-4">
