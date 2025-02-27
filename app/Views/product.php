@@ -24,17 +24,17 @@
 
             <!-- Image gallery -->
             <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-                <img src="https://massivehome.com.mx/images/productos/<?= $product[0]->Img ?>" alt="Two each of gray, white, and black shirts laying flat." class="hidden size-full rounded-lg object-cover lg:block">
+                <img src="https://massivehome.com.mx/images/productos/<?= $product[0]->Img ?>" alt="<?= $product[0]->nameProduct ?>" class="hidden size-full rounded-lg object-cover lg:block">
                 <?php if (count($gallery) > 0): ?>
                     <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
                         <?php for ($i = 0; $i < 2; $i++): ?>
                             <?php if (isset($gallery[$i])): ?>
-                                <img src="https://massivehome.com.mx/images/productos/<?= $gallery[$i]->img ?>" alt="Model wearing plain black basic tee." class="aspect-[3/2] w-full rounded-lg object-cover">
+                                <img src="https://massivehome.com.mx/images/productos/<?= $gallery[$i]->img ?>" alt="<?= $product[0]->nameProduct ?>" class="aspect-[3/2] w-full rounded-lg object-cover">
                             <?php endif; ?>
                         <?php endfor; ?>
                     </div>
                     <?php if (isset($gallery[2])): ?>
-                        <img src="https://massivehome.com.mx/images/productos/<?= $gallery[2]->img ?>" alt="Model wearing plain white basic tee." class="aspect-[4/5] size-full object-cover sm:rounded-lg lg:aspect-auto">
+                        <img src="https://massivehome.com.mx/images/productos/<?= $gallery[2]->img ?>" alt="<?= $product[0]->nameProduct ?>" class="aspect-[4/5] size-full object-cover sm:rounded-lg lg:aspect-auto">
                     <?php endif; ?>
                 <?php endif; ?>
             </div>
