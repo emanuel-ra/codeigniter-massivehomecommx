@@ -7,7 +7,7 @@ class Catalogs extends BaseController
 
     public function iluminacionLed()
     {
-        $filename = "CATALOGO-ILUMINACION-2024.pdf";
+        $filename = "CATALOGO-DE-ILUMINACION-2025.pdf";
         /// Ruta al directorio donde están los PDFs
         $ruta = WRITEPATH . 'pdf' . DIRECTORY_SEPARATOR . $filename;
 
@@ -20,7 +20,7 @@ class Catalogs extends BaseController
     }
     public function ventiladoresDeTecho()
     {
-        $filename = "CATALOGO-VENTILADORES-2024.pdf";
+        $filename = "CATALOGO-DE-VENTILADORES-2025.pdf";
         /// Ruta al directorio donde están los PDFs
         $ruta = WRITEPATH . 'pdf' . DIRECTORY_SEPARATOR . $filename;
 
