@@ -37,12 +37,12 @@ class Home extends BaseController
         return array(
             array(
                 'name' => 'Catalogo de Iluminación LED',
-                'img' => 'assets/images/catalogo-iluminacion-led-2024.webp',
+                'img' => 'assets/images/catalogo-de-iluminacion-2025.webp',
                 'url' => 'pdf/iluminacion-led'
             ),
             array(
                 'name' => 'Catalogo de Ventiladores de Techo',
-                'img' => 'assets/images/catalogo-ventiladores-de-techo-2024.webp',
+                'img' => 'assets/images/cat-de-ventiladores-de-techo-2025.webp',
                 'url' => 'pdf/ventiladores-de-techo'
             ),
             array(
