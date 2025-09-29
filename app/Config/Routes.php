@@ -20,6 +20,7 @@ $routes->get('sitemap.xml', 'Sitemap::index');
 $routes->get('pdf/iluminacion-led', 'Catalogs::iluminacionLed');
 $routes->get('pdf/ventiladores-de-techo', 'Catalogs::ventiladoresDeTecho');
 $routes->get('pdf/candiles', 'Catalogs::candiles');
+$routes->get('pdf/christmas', 'Catalogs::christmas');
 
 // API
 $routes->resource('api/products', ['controller' => 'ProductsApi']);

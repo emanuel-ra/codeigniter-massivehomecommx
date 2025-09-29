@@ -44,4 +44,17 @@ class Catalogs extends BaseController
             return $this->response->setStatusCode(404, 'Archivo no encontrado');
         }
     }
+    public function christmas()
+    {
+        $filename = "CATALOG-CHRISTMAS-2025.pdf";
+        /// Ruta al directorio donde están los PDFs
+        $ruta = WRITEPATH . 'pdf' . DIRECTORY_SEPARATOR . $filename;
+
+        // Verificar si el archivo existe
+        if (file_exists($ruta)) {
+            return $this->response->download($ruta, null);
+        } else {
+            return $this->response->setStatusCode(404, 'Archivo no encontrado');
+        }
+    }
 }

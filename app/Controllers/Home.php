@@ -36,6 +36,11 @@ class Home extends BaseController
     {
         return array(
             array(
+                'name' => 'Catalogo de Luces Navideñas',
+                'img' => 'assets/images/CATALOG-CHRISTMAS-2025.webp',
+                'url' => 'pdf/christmas'
+            ),
+            array(
                 'name' => 'Catalogo de Iluminación LED',
                 'img' => 'assets/images/catalogo-de-iluminacion-2025.webp',
                 'url' => 'pdf/iluminacion-led'
