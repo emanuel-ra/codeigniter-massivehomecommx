@@ -2,6 +2,9 @@
 
 use CodeIgniter\Router\RouteCollection;
 
+
+header("Location: https://megaluz.mx/");
+exit;
 /**
  * @var RouteCollection $routes
  */
